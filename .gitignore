@@ -3,6 +3,7 @@
 *
 
 !.gitconfig
+!.alacritty.toml
 
 !.config/
 !.config/hypr
