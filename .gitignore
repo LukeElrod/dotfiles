@@ -1,0 +1,17 @@
+
+# Ignore everything
+*
+
+!.gitconfig
+
+!.config/
+!.config/hypr
+!.config/hypr/*
+!.config/waybar/
+!.config/waybar/*
+!.config/wofi/
+!.config/wofi/*
+
+# Allow the .gitignore itself
+!.gitignore
+
