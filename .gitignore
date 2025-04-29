@@ -6,12 +6,14 @@
 !.alacritty.toml
 
 !.config/
-!.config/hypr
+!.config/hypr/
 !.config/hypr/*
 !.config/waybar/
 !.config/waybar/*
 !.config/wofi/
 !.config/wofi/*
+!.config/fontconfig/
+!.config/fontconfig/*
 
 # Allow the .gitignore itself
 !.gitignore
