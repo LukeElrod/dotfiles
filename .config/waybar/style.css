@@ -1,6 +1,6 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "0xProtoNerdFontMono","3270NerdFontMono","FontAwesome";
+    /*make sure this is a nerd font*/
+    font-family: "0xProtoNerdFontMono";
     font-size: 18px;
 }
 
