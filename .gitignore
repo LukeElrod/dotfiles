@@ -14,6 +14,8 @@
 !.config/wofi/*
 !.config/fontconfig/
 !.config/fontconfig/*
+!.config/uwsm/
+!.config/uwsm/*
 
 # Allow the .gitignore itself
 !.gitignore
