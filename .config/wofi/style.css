@@ -11,20 +11,20 @@
     margin: 5px;
     border-radius: 20px;
     border: none;
-    background-color: #3B4252;
+    background-color: #45403d;
     color: white;
 }
 
 #inner-box {
-    background-color: #383C4A;
+    background-color: #32302f;
 }
 
 #outer-box {
     margin: 2px;
     padding: 10px;
 
-    background: linear-gradient(#383C4A, #383C4A) padding-box,
-    linear-gradient(to bottom right, #33ccff, #00ff99) border-box;
+    background: linear-gradient(#32302f, #32302f) padding-box,
+    linear-gradient(to bottom right, #d8a657, #e78a4e) border-box;
     border-radius: 20px;
     border: 2px solid transparent;
 }
@@ -40,11 +40,11 @@
 
 #entry{
     border-radius: 20px;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 #entry:nth-child(even){
-    background-color: #404552;
+    background-color: #45403d;
 }
 
 image {
@@ -52,7 +52,7 @@ image {
 }
 
 #entry:selected {
-    background-color: #4C566A;
+    background-color: #5a524c;
 }
 
 #text:selected {
@@ -60,5 +60,5 @@ image {
 }
 
 list {
-    background-color: #3B4252;
+    background-color: #32302f;
 }
