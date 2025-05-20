@@ -1,6 +1,0 @@
-[window]
-decorations = "None"
-[font]
-normal = {family = "0xProto Nerd Font Mono", style = "Regular"}
-[colors.primary]
-background = "#282828"
