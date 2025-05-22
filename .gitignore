@@ -2,9 +2,6 @@
 # Ignore everything
 *
 
-!.gitconfig
-!.alacritty.toml
-
 !.config/
 !.config/hypr/
 !.config/hypr/*
@@ -21,4 +18,3 @@
 
 # Allow the .gitignore itself
 !.gitignore
-
