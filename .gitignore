@@ -17,6 +17,8 @@
 !.config/kitty/*
 !.config/mako/
 !.config/mako/*
+!.config/fastfetch/
+!.config/fastfetch/*
 
 # Allow the .gitignore itself
 !.gitignore
