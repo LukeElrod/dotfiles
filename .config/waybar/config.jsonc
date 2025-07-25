@@ -70,12 +70,15 @@
         "window-rewrite": {
             "class<com.obsproject.Studio>": "",
             "class<resolve>": "",
-            "class<librewolf>": "",
+            "class<librewolf>": "",
             "class<steam>": "",
             "class<gimp>": "",
             "class<discord>": "",
             "class<Signal>": "",
             "class<Spotify>": "",
+            "class<blender>": "",
+            "class<vlc>": "󰕼",
+            "class<org.gnome.Nautilus>": "",
             "Minecraft": "󰍳",
             "class<kitty>": ""
         },
