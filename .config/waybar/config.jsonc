@@ -64,7 +64,21 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{name}:<big>{windows}</big>",
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<com.obsproject.Studio>": "",
+            "class<resolve>": "",
+            "class<librewolf>": "",
+            "class<steam>": "",
+            "class<gimp>": "",
+            "class<discord>": "",
+            "class<Signal>": "",
+            "class<Spotify>": "",
+            "Minecraft": "󰍳",
+            "class<kitty>": ""
+        },
         "on-click": "activate",
         "sort-by-number": true
     },
