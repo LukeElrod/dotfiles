@@ -72,16 +72,18 @@
             "class<resolve>": "",
             "class<librewolf>": "",
             "class<steam>": "",
-            "class<gimp>": "",
+            "class<gimp>": "",
             "class<discord>": "",
             "class<vesktop>": "",
             "class<Signal>": "",
             "class<Spotify>": "",
             "class<blender>": "",
             "class<vlc>": "󰕼",
+            "class<kitty>": "󰞷",
             "class<org.gnome.Nautilus>": "",
             "Minecraft": "󰍳",
-            "class<kitty>": ""
+            "class<com.usebottles.bottles>": "󰡔",
+            "class<obsidian>": "󰠮"
         },
         "on-click": "activate",
         "sort-by-number": true
