@@ -84,3 +84,28 @@ tooltip {
 #memory.critical {
     color: #db4740;
 }
+
+menu {
+  background-color: #282828;
+  border: 1px solid #504945;
+  color: #ebdbb2;
+  border-radius: 12px;
+  font-size: 18px;
+  padding: 8px;
+}
+
+menuitem {
+  background-color: #3c3836;
+  color: #ebdbb2;
+  border-bottom: 1px solid #504945;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 4px 0;
+  min-width: 120px;
+}
+
+menuitem:hover {
+  background-color: #504945;
+  color: #fabd2f;
+}
