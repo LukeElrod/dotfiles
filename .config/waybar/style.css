@@ -9,8 +9,7 @@
 }
 
 window#waybar {
-    background: #1d2021;
-    border: 2px solid #3c3836;
+    background: rgba(29,32,33,0.6);
 }
 
 tooltip {
@@ -39,10 +38,24 @@ tooltip {
     padding: 2px 8px;
 }
 
+#custom-power,
+#cpu,
+#memory,
+#network,
+#battery,
+#gamemode,
+#pulseaudio, 
+#clock {
+    color: #d4be98;
+}
+
+#cpu.critical,
+#memory.critical {
+    color: #db4740;
+}
+
 #workspaces {
-    background-color: #303536;
     margin: 6px 0px 6px 6px;
-    border: 2px solid #434a4c;
 }
 
 #workspaces button {
@@ -67,23 +80,6 @@ tooltip {
     opacity: 0.5;
 }
 
-#custom-power,
-#cpu,
-#memory,
-#network,
-#battery,
-#gamemode,
-#pulseaudio, 
-#clock {
-    background-color: #303536;
-    border: 2px solid #434a4c;
-    color: #d4be98;
-}
-
-#cpu.critical,
-#memory.critical {
-    color: #db4740;
-}
 
 menu {
   background-color: #282828;
