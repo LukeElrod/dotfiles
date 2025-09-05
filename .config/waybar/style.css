@@ -1,20 +1,19 @@
 * {
-    border: none;
-    border-radius: 0;
-    min-height: 0;
     font-family: "0xProtoNerdFontMono";
-    font-weight: 500;
+    font-weight: 900;
     font-size: 14px;
-    padding: 0;
 }
 
 window#waybar {
-    background: rgba(29,32,33,0.6);
+    background: rgba(0,0,0,0);
 }
 
 tooltip {
-    background-color: #1d2021;
-    border: 2px solid #7c6f64;
+    background: rgba(29,32,33,0.6);
+}
+
+tooltip label {
+    color: #d4be98;
 }
 
 #gamemode {
@@ -25,6 +24,24 @@ tooltip {
 #custom-power {
     margin: 6px 6px 6px 0px;
     padding-left: 8px;
+}
+
+.modules-left {
+    background: rgba(29,32,33,0.6);
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+
+.modules-center {
+    background: rgba(29,32,33,0.6);
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+
+.modules-right {
+    background: rgba(29,32,33,0.6);
+    padding: 0px 10px;
+    border-radius: 30px;
 }
 
 #clock,
@@ -68,11 +85,13 @@ tooltip {
 
 #workspaces button.active {
     background-color: #3b4439;
+    border-radius: 10px;
     color: #8bba7f;
 }
 
 #workspaces button.urgent {
     background-color: #4c3432;
+    border-radius: 10px;
     color: #db4740;
 }
 
