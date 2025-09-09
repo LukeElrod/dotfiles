@@ -22,3 +22,5 @@
 
 # Allow the .gitignore itself
 !.gitignore
+
+!readme.md
