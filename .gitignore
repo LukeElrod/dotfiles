@@ -9,6 +9,8 @@
 !.config/waybar/*
 !.config/wofi/
 !.config/wofi/*
+!.config/rofi/
+!.config/rofi/*
 !.config/fontconfig/
 !.config/fontconfig/*
 !.config/uwsm/
