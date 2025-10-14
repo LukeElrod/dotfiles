@@ -127,6 +127,7 @@
     },
 
     "pulseaudio": {
+        "on-click": "flatpak run com.saivert.pwvucontrol",
         "scroll-step": 5,
         "max-volume": 150,
         "format": "vol {volume}%",
