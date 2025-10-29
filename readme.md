@@ -1,7 +1,6 @@
 # Dotfiles
 
 ## Requirements
-    - git
     - Hyprland
     - uwsm
     - Wofi
