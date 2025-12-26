@@ -19,7 +19,6 @@
 
     "modules-right": [
         "tray",
-        "cpu_text",
         "cpu",
         "memory",
         "network",
