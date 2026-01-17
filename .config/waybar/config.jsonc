@@ -42,7 +42,7 @@
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml",
         "menu-actions": {
-            "shutdown": "systemctl poweroff",
+            "shutdown": "$HOME/.config/waybar/shutdown.sh",
             "reboot": "reboot",
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
