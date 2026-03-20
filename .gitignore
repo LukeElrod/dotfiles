@@ -13,8 +13,6 @@
 !.config/rofi/*
 !.config/fontconfig/
 !.config/fontconfig/*
-!.config/uwsm/
-!.config/uwsm/*
 !.config/kitty/
 !.config/kitty/*
 !.config/mako/
