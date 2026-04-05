@@ -1,150 +1,146 @@
 {
-    "layer": "top",
-    "spacing": 0,
-    "height": 0,
+  "layer": "top",
+  "spacing": 0,
+  "height": 0,
 
-    "margin-top": 8,
-    "margin-right": 8,
-    "margin-bottom": 0,
-    "margin-left": 8,
+  "margin-top": 8,
+  "margin-right": 8,
+  "margin-bottom": 0,
+  "margin-left": 8,
 
-    "modules-left": [
-        "hyprland/workspaces",
-        "gamemode"
-    ],
+  "modules-left": ["hyprland/workspaces", "gamemode"],
 
-    "modules-center": [
-        "clock"
-    ],
+  "modules-center": ["clock"],
 
-    "modules-right": [
-        "tray",
-        "cpu",
-        "memory",
-        "network",
-        "pulseaudio",
-        "battery",
-        "custom/power"
-    ],
-    "battery": {
-        "interval": 60,
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "max-length": 25
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "battery",
+    "custom/power",
+  ],
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15,
     },
-    "custom/power": {
-        "format" : "⏻ ",
-        "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "shutdown": "$HOME/.config/waybar/shutdown.sh",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
+    "format": "{capacity}% <big>{icon}</big>",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+  },
+  "custom/power": {
+    "format": "<big>⏻</big>",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/power_menu.xml",
+    "menu-actions": {
+      "shutdown": "$HOME/.config/waybar/shutdown.sh",
+      "reboot": "reboot",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate",
     },
+  },
 
-    "gamemode": {
-        "format": "{glyph}",
-        "format-alt": "{glyph} {count}",
-        "glyph": "<U+F11B>",
-        "hide-not-running": true,
-        "use-icon": true,
-        "icon-name": "input-gaming-symbolic",
-        "icon-spacing": 4,
-        "icon-size": 20,
-        "tooltip": true,
-        "tooltip-format": "Games running: {count}"
+  "gamemode": {
+    "format": "{glyph}",
+    "format-alt": "{glyph} {count}",
+    "glyph": "<U+F11B>",
+    "hide-not-running": true,
+    "use-icon": true,
+    "icon-name": "input-gaming-symbolic",
+    "icon-spacing": 4,
+    "icon-size": 20,
+    "tooltip": true,
+    "tooltip-format": "Games running: {count}",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}:<big>{windows}</big>",
+    "format-window-separator": " ",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<com.obsproject.Studio>": "",
+      "class<resolve>": "",
+      "class<librewolf>": "",
+      "class<firefox>": "",
+      "class<steam>": "",
+      "class<gimp>": "",
+      "class<discord>": "",
+      "class<vesktop>": "",
+      "class<Signal>": "",
+      "class<Spotify>": "",
+      "class<blender>": "",
+      "class<vlc>": "󰕼",
+      "class<kitty>": "󰞷",
+      "class<org.gnome.Nautilus>": "",
+      "Minecraft": "󰍳",
+      "class<com.usebottles.bottles>": "󰡔",
+      "class<obsidian>": "󰠮",
     },
+    "on-click": "activate",
+    "sort-by-number": true,
+  },
 
-    "hyprland/workspaces": {
-        "format": "{name}:<big>{windows}</big>",
-        "format-window-separator": " ",
-        "window-rewrite-default": "",
-        "window-rewrite": {
-            "class<com.obsproject.Studio>": "",
-            "class<resolve>": "",
-            "class<librewolf>": "",
-            "class<firefox>": "",
-            "class<steam>": "",
-            "class<gimp>": "",
-            "class<discord>": "",
-            "class<vesktop>": "",
-            "class<Signal>": "",
-            "class<Spotify>": "",
-            "class<blender>": "",
-            "class<vlc>": "󰕼",
-            "class<kitty>": "󰞷",
-            "class<org.gnome.Nautilus>": "",
-            "Minecraft": "󰍳",
-            "class<com.usebottles.bottles>": "󰡔",
-            "class<obsidian>": "󰠮"
-        },
-        "on-click": "activate",
-        "sort-by-number": true
+  "tray": {
+    "spacing": 10,
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p - %a, %d %b %Y}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ebdbb2'><b>{}</b></span>",
+        "days": "<span color='#ebdbb2'><b>{}</b></span>",
+        "weeks": "<span color='#8ec07c'><b>W{}</b></span>",
+        "weekdays": "<span color='#fabd2f'><b>{}</b></span>",
+        "today": "<span color='#fb4934'><b><u>{}</u></b></span>",
+      },
     },
+  },
 
-    "tray": {
-        "spacing": 10,
-        "tooltip": false
+  "cpu": {
+    "format": "<big></big> {usage}%",
+    "interval": 2,
+
+    "states": {
+      "critical": 90,
     },
+  },
 
-    "clock": {
-        "format": "{:%I:%M %p - %a, %d %b %Y}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    }
+  "memory": {
+    "format": "<big></big> {percentage}%",
+    "interval": 2,
+
+    "states": {
+      "critical": 80,
     },
+  },
 
-    "cpu": {
-        "format": "cpu {usage}%",
-        "interval": 2,
+  "network": {
+    "format-wifi": "<big></big> {bandwidthDownBits}",
+    "format-ethernet": "<big>󰈀</big> {bandwidthDownBits}",
+    "format-disconnected": "<big>󰖪</big> disconnected",
+    "interval": 5,
+    "tooltip": false,
+  },
 
-        "states": {
-            "critical": 90
-        }
-    },
-
-    "memory": {
-        "format": "mem {percentage}%",
-        "interval": 2,
-
-        "states": {
-            "critical": 80
-        }
-    },
-
-    "network": {
-        "format-wifi" : "wifi {bandwidthDownBits}",
-        "format-ethernet": "enth {bandwidthDownBits}",
-        "format-disconnected" : "no network",
-        "interval": 5,
-        "tooltip": false
-    },
-
-    "pulseaudio": {
-        "on-click": "flatpak run com.saivert.pwvucontrol",
-        "scroll-step": 5,
-        "max-volume": 150,
-        "format": "vol {volume}%",
-        "format-bluetooth": "vol {volume}%",
-        "nospacing": 1,
-        "tooltip": false
-    }
+  "pulseaudio": {
+    "on-click": "flatpak run com.saivert.pwvucontrol",
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "<big>󰕾</big> {volume}%",
+    "format-muted": "<big>󰖁</big> {volume}%",
+    "format-bluetooth": "<big>󰕾</big> {volume}%",
+    "nospacing": 1,
+    "tooltip": false,
+  },
 }
