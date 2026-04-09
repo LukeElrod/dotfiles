@@ -2,6 +2,7 @@
 # Ignore everything
 *
 
+!.tmux.conf
 !.config/
 !.config/hypr/
 !.config/hypr/*
