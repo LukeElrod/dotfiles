@@ -1,4 +1,3 @@
-
 # Ignore everything
 *
 
@@ -6,20 +5,10 @@
 !.config/
 !.config/hypr/
 !.config/hypr/*
-!.config/waybar/
-!.config/waybar/*
-!.config/wofi/
-!.config/wofi/*
-!.config/rofi/
-!.config/rofi/*
 !.config/fontconfig/
 !.config/fontconfig/*
 !.config/kitty/
 !.config/kitty/*
-!.config/mako/
-!.config/mako/*
-!.config/fastfetch/
-!.config/fastfetch/*
 
 # Allow the .gitignore itself
 !.gitignore
