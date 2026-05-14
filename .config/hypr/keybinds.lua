@@ -35,9 +35,12 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "-1" }))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "+1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
@@ -77,3 +80,9 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
+--extra
+hl.bind("XF86Tools", hl.dsp.exec_cmd("spotify-launcher"))
+hl.bind("XF86Calculator", hl.dsp.exec_cmd("gnome-calculator"))
+hl.bind("XF86Mail", hl.dsp.exec_cmd("discord"))
+hl.bind("XF86HomePage", hl.dsp.exec_cmd("steam"))
