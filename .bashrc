@@ -13,6 +13,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias la='ls -la'
 alias cls='clear'
+alias gst='git status'
 
 hex_to_ps1_color() {
   local hex="${1#"#"}"
