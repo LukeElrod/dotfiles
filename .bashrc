@@ -26,13 +26,5 @@ hex_to_ps1_color() {
 
 PS1="$(hex_to_ps1_color '89B482')\u@\h \w> \[\e[0m\]"
 
-# pnpm
-export PNPM_HOME="/home/raz/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/development/flutter/bin:$PATH"
