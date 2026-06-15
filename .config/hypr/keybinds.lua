@@ -20,14 +20,30 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + Escape", hl.dsp.exit())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + down", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + right", hl.dsp.window.move({ direction = "right" }))
+
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "-1" }))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "+1" }))
+
+--dwindle
 hl.bind(mainMod .. " + G", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + S", hl.dsp.layout("swapsplit"))
-hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen())
 
-hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
-hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
+--scrolling
+hl.bind("ALT + Tab", hl.dsp.layout("focus right"))
+hl.bind("ALT + grave", hl.dsp.layout("focus left"))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("focus right"))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("focus left"))
+hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("promote"))
+
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
@@ -35,20 +51,12 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "-1" }))
-hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "+1" }))
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "-1" }))
-hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "+1" }))
-
--- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-
-hl.bind("ALT + Tab", function()
-	hl.dispatch(hl.dsp.window.cycle_next()) -- Change focus to another window
-	hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+hl.bind(mainMod .. " + bracketright", function()
+	if hl.get_config("general.layout") == "scrolling" then
+		hl.config({ general = { layout = "dwindle" } })
+	else
+		hl.config({ general = { layout = "scrolling" } })
+	end
 end)
 
 -- Laptop multimedia keys for volume and LCD brightness
