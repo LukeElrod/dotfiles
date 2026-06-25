@@ -14,13 +14,9 @@ hl.config({
 		resize_on_border = false,
 
 		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-		allow_tearing = false,
+		allow_tearing = true,
 
 		layout = "scrolling",
-	},
-
-	scrolling = {
-		column_width = 1,
 	},
 
 	decoration = {
@@ -78,13 +74,6 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 1.94, bezier = "almo
 hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
-
--- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
-hl.config({
-	dwindle = {
-		preserve_split = true, -- You probably want this
-	},
-})
 
 hl.config({
 	misc = {

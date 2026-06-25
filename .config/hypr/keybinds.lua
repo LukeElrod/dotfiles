@@ -25,17 +25,12 @@ hl.bind(mainMod .. " + left", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + down", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + up", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + right", hl.dsp.window.move({ direction = "right" }))
-
 hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "-1" }))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "+1" }))
-
---dwindle
-hl.bind(mainMod .. " + G", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + S", hl.dsp.layout("swapsplit"))
-
---scrolling
+hl.bind(mainMod .. " + G", hl.dsp.layout("swapcol l"))
+hl.bind(mainMod .. " + S", hl.dsp.layout("promote"))
 hl.bind("ALT + Tab", hl.dsp.layout("focus right"))
 hl.bind("ALT + grave", hl.dsp.layout("focus left"))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("focus right"))
@@ -50,14 +45,6 @@ for i = 1, 10 do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
-
-hl.bind(mainMod .. " + bracketright", function()
-	if hl.get_config("general.layout") == "scrolling" then
-		hl.config({ general = { layout = "dwindle" } })
-	else
-		hl.config({ general = { layout = "scrolling" } })
-	end
-end)
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
