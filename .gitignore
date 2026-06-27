@@ -9,6 +9,8 @@
 !.config/fontconfig/*
 !.config/kitty/
 !.config/kitty/*
+!.config/noctalia/
+!.config/noctalia/*
 
 # Allow the .gitignore itself
 !.gitignore
