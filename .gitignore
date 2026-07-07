@@ -14,4 +14,3 @@
 
 # Allow the .gitignore itself
 !.gitignore
-!.bashrc
