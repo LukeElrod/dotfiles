@@ -11,6 +11,8 @@
 !.config/kitty/*
 !.config/noctalia/
 !.config/noctalia/*
+!.config/opencode/
+!.config/opencode/*
 
 # Allow the .gitignore itself
 !.gitignore

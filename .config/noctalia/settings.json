@@ -22,7 +22,8 @@
             "Battle.net",
             "discord",
             "org.prismlauncher.PrismLauncher",
-            "obsidian"
+            "obsidian",
+            "com.heroicgameslauncher.hgl"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
