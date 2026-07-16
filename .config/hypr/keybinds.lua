@@ -4,6 +4,28 @@ local browser = "firefox"
 local fileManager = "nautilus"
 local ipc = "qs -c noctalia-shell ipc call"
 
+local tapTimer = nil
+
+local function on_double_tap(mods, key, callback, timeout, opts)
+	timeout = timeout or 300
+	local bindString
+	if mods then
+		bindString = mods .. " + " .. key
+	else
+		bindString = key
+	end
+	hl.bind(bindString, function()
+		if tapTimer then
+			tapTimer = nil
+			callback()
+		else
+			tapTimer = hl.timer(function()
+				tapTimer = nil
+			end, { timeout = timeout, type = "oneshot" })
+		end
+	end, opts)
+end
+
 -- noctalia-shell
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(ipc .. " launcher toggle"))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings toggle"))
@@ -29,13 +51,17 @@ hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "-1" }))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "+1" }))
+hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + G", hl.dsp.layout("swapcol l"))
 hl.bind(mainMod .. " + S", hl.dsp.layout("promote"))
 hl.bind("ALT + Tab", hl.dsp.layout("focus right"))
 hl.bind("ALT + grave", hl.dsp.layout("focus left"))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.layout("focus right"))
-hl.bind(mainMod .. " + mouse_down", hl.dsp.layout("focus left"))
-hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("promote"))
+
+on_double_tap(mainMod, "SUPER_L", function()
+	--hl.exec_cmd("notify-send 'Double tap detected!'")
+	hl.dispatch(hl.dsp.layout("colresize 1"))
+end, 300, { release = true })
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
