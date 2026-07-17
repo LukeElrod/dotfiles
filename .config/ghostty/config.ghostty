@@ -1,10 +1,10 @@
 font-family = "0xProto Nerd Font Mono"
 font-size = 12
 
-foreground = #ddc7a1
-background = #252423
 background-opacity = 0.9
 background-blur = 32
+
+theme = Gruvbox Material
 
 cursor-style = block
 shell-integration-features = no-cursor
