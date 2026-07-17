@@ -9,6 +9,8 @@
 !.config/fontconfig/*
 !.config/kitty/
 !.config/kitty/*
+!.config/ghostty/
+!.config/ghostty/*
 !.config/noctalia/
 !.config/noctalia/*
 !.config/opencode/

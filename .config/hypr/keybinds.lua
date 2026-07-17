@@ -1,5 +1,5 @@
 local mainMod = "SUPER"
-local terminal = "kitty"
+local terminal = "ghostty"
 local browser = "firefox"
 local fileManager = "nautilus"
 local ipc = "qs -c noctalia-shell ipc call"

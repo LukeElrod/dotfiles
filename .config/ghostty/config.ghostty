@@ -1,0 +1,18 @@
+font-family = "0xProto Nerd Font Mono"
+font-size = 12
+
+foreground = #ddc7a1
+background = #252423
+background-opacity = 0.9
+background-blur = 32
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+keybind = ctrl+equal=increase_font_size:2
+keybind = ctrl+minus=decrease_font_size:2
+
+window-decoration = auto
+window-theme = dark
+macos-titlebar-style = native
+macos-option-as-alt = true
