@@ -16,5 +16,7 @@
 !.config/opencode/
 !.config/opencode/*
 
+!.bashrc
+
 # Allow the .gitignore itself
 !.gitignore
