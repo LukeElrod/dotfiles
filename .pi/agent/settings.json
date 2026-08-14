@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "0.84.2",
+  "theme": "dark",
+  "defaultProvider": "github-copilot",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultThinkingLevel": "medium",
+  "skills": [
+    "-skills/microsoft-foundry/SKILL.md"
+  ],
+  "packages": [
+    "npm:@gotgenes/pi-permission-system",
+    "npm:pi-zentui"
+  ],
+  "tuiMode": "fullscreen"
+}

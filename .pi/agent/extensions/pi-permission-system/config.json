@@ -1,0 +1,35 @@
+{
+  "permission": {
+    "*": "allow",
+    "bash": {
+      "*": "allow",
+      "rm *": "ask",
+      "rmdir *": "ask",
+      "mv *": "ask",
+      "cp *": "ask",
+      "dd *": "ask",
+      "shred *": "ask",
+      "mkfs*": "ask",
+      "chmod *": "ask",
+      "chown *": "ask",
+      "kill *": "ask",
+      "pkill *": "ask",
+      "killall *": "ask",
+      "shutdown *": "ask",
+      "reboot *": "ask",
+      "halt *": "ask",
+      "poweroff *": "ask",
+      "git commit *": "ask",
+      "git push *": "ask",
+      "git rm *": "ask",
+      "> *": "ask",
+      "sudo *": "deny"
+    },
+    "edit": {
+      "*": "ask"
+    },
+    "write": {
+      "*": "ask"
+    }
+  }
+}
