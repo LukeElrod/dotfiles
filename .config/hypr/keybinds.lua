@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 local terminal = "ghostty"
 local browser = "firefox"
 local fileManager = "nautilus"
-local ipc = "qs -c noctalia-shell ipc call"
+local ipc = "noctalia msg "
 
 local tapTimer = nil
 
@@ -27,14 +27,11 @@ local function on_double_tap(mods, key, callback, timeout, opts)
 end
 
 -- noctalia-shell
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(ipc .. " launcher toggle"))
-hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings toggle"))
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(ipc .. " launcher emoji"))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher /emo"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
 
-hl.bind(
-	mainMod .. " + SHIFT + S",
-	hl.dsp.exec_cmd('grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshots/$(date "+%y%m%d_%H-%M-%S").png" | wl-copy')
-)
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))

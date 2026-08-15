@@ -7,7 +7,7 @@ hl.config({
 		kb_rules = "",
 		numlock_by_default = true,
 		tablet = {
-			output = "DP-2",
+			output = MONITORS[1].output,
 		},
 
 		follow_mouse = 1,
@@ -20,7 +20,7 @@ hl.config({
 		},
 	},
 	cursor = {
-		default_monitor = "DP-2",
+		default_monitor = MONITORS[1].output,
 	},
 	ecosystem = {
 		no_donation_nag = false,
