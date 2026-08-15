@@ -31,6 +31,3 @@ PS1="$(hex_to_ps1_color '89B482')\u@\h \w> \[\e[0m\]"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/development/flutter/bin:$PATH"
-
-# opencode
-export PATH=/home/raz/.opencode/bin:$PATH
