@@ -1,4 +1,7 @@
 {
+  "debugLog": false,
+  "permissionReviewLog": true,
+  "yoloMode": false,
   "permission": {
     "*": "allow",
     "bash": {
@@ -21,7 +24,16 @@
       "poweroff *": "ask",
       "git commit *": "ask",
       "git push *": "ask",
+      "git add *": "ask",
       "git rm *": "ask",
+      "git stash *": "ask",
+      "git reset *": "ask",
+      "git checkout *": "ask",
+      "git merge *": "ask",
+      "git rebase *": "ask",
+      "git revert *": "ask",
+      "git clean *": "ask",
+      "git tag *": "ask",
       "> *": "ask",
       "sudo *": "deny"
     },
