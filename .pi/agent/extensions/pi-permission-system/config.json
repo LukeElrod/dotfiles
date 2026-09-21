@@ -36,12 +36,6 @@
       "git tag *": "ask",
       "> *": "ask",
       "sudo *": "deny"
-    },
-    "edit": {
-      "*": "ask"
-    },
-    "write": {
-      "*": "ask"
     }
   }
 }
