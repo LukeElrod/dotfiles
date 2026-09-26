@@ -22,18 +22,19 @@ hl.window_rule({
 	no_focus = true,
 })
 
+--fullscreen proton apps by default
 hl.window_rule({
 	match = {
-		title = "Steam",
+		class = [[^(steam_app_\d+|steam_app_default)$]],
 	},
-	tile = true,
+	fullscreen = true,
 })
 
 hl.window_rule({
 	match = {
-		title = "Diablo IV",
+		title = "Battle.net",
 	},
-	fullscreen = true,
+	fullscreen = false,
 })
 
 --workspaces
