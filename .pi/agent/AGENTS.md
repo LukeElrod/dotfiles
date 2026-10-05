@@ -1,1 +1,1 @@
-- DO NOT RUN ANY "WRITING" OR DESTRUCTIVE GIT COMMANDS: LEAVE ALL OF THAT TO THE USER. EXAMPLES INCLUDE: `git commit`, `git push`, `git stash`, etc.
+- DO NOT RUN `git commit` COMMANDS or `git push` COMMANDS
