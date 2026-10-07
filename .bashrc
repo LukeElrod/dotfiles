@@ -7,7 +7,6 @@
 
 export SUDO_EDITOR=nvim
 
-alias pu='pi update && pi update --extensions'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
